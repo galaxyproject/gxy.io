@@ -1,7 +1,7 @@
 name: Check
 on: [pull_request]
-permissions:
-  issues: write
+#permissions:
+#  issues: write
 jobs:
 
   check:
@@ -22,21 +22,24 @@ jobs:
         if: success() || failure()
         run: cat test-results.tap | ./.ci/tapview | tee test-results.txt
 
-      - name: Collect tapview output
-        if: (success() || failure()) && github.event_name == 'pull_request'
-        run: |
-          echo 'TEST_RESULTS<<EOF' >> $GITHUB_ENV
-          cat test-results.txt >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
+      # GITHUB_TOKEN is restricted on the org account and yet all of the settings should allow it to comment:
+      #   https://github.com/galaxyproject/gxy.io/pull/3
 
-      - uses: actions/github-script@v1
-        if: (success() || failure()) && github.event_name == 'pull_request'
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            github.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: `${{ env.TEST_RESULTS }}`
-            })
+      #- name: Collect tapview output
+      #  if: (success() || failure()) && github.event_name == 'pull_request'
+      #  run: |
+      #    echo 'TEST_RESULTS<<EOF' >> $GITHUB_ENV
+      #    cat test-results.txt >> $GITHUB_ENV
+      #    echo 'EOF' >> $GITHUB_ENV
+
+      #- uses: actions/github-script@v1
+      #  if: (success() || failure()) && github.event_name == 'pull_request'
+      #  with:
+      #    github-token: ${{ secrets.GITHUB_TOKEN }}
+      #    script: |
+      #      github.issues.createComment({
+      #        issue_number: context.issue.number,
+      #        owner: context.repo.owner,
+      #        repo: context.repo.repo,
+      #        body: `${{ env.TEST_RESULTS }}`
+      #      })

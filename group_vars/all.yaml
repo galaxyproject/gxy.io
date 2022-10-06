@@ -5,6 +5,7 @@ gxy_io_rewrites:
   - src: /toolshed
     dest: https://toolshed.g2.bx.psu.edu/
 
+__hold:
   # Conferences and meetings
   - src: /bcc
     dest: https://live.remo.co/e/bcc-2020

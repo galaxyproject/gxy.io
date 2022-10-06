@@ -1,0 +1,68 @@
+---
+
+gxy_io_rewrites:
+  # Galaxy ancillary services and projects
+  - src: /toolshed
+    dest: https://toolshed.g2.bx.psu.edu/
+
+  # Conferences and meetings
+  - src: /bcc
+    dest: https://live.remo.co/e/bcc-2020
+
+  # Galaxy Admin Training
+  - src: /gat
+    dest: https://github.com/galaxyproject/admin-training/
+  - src: /gat-?machines
+    dest: https://docs.google.com/spreadsheets/d/11nQKJmHHf7GWR_C36rdu2dVOHZZ0cXpv09b84txm_3A/
+    tests:
+      - /gatmachines
+      - /gat-machines
+  - src: /gat-?chat
+    dest: https://gitter.im/galaxyproject/admin-training
+    tests:
+      - /gatchat
+      - /gat-chat
+  - src: /gat-?(qa|qanda|discussion|questions)
+    dest: https://docs.google.com/document/d/1mmhZRpV4XQnMB5UoPGDw0qT8I3oF2DIEYPxvPH4tDz0/edit
+    tests:
+      - /gatqa
+      - /gat-qanda
+      - /gatdiscussion/
+      - /gat-questions
+
+  # Matrix/Gitter channels
+  - src: /admin-?chat
+    dest: https://gitter.im/galaxyproject/admins
+    tests:
+      - /adminchat/
+      - /admin-chat
+
+  # Project member personal redirects
+  - src: /nate/ccbb2018
+    dest: https://docs.google.com/presentation/d/18VO-J2Ie-wNSApBN_4JlOaCilWQP6qNOtni9NLENZOE/
+  - src: /nate/sgci2020
+    dest: https://docs.google.com/presentation/d/1hDcGBXiaQ7-hWk9hNHVfpGFl14RKrTAVwwt7K68yPrU/
+  - src: /nate/gccbosc2018infra
+    dest: https://docs.google.com/presentation/d/1_y3m4p_KwoG3gRIV--buQ_xXw0ZlyKtKVFfxMpkIjBU/
+  - src: /nate/gcc2022gravity
+    dest: https://docs.google.com/presentation/d/1vDNKL4I2OoQDg6gJg2hx2Do2L94tdcIrcuJAMOM2zMc/
+  - src: /nate/egd2022gravity
+    dest: https://docs.google.com/presentation/d/1_GPs99bPgS9mm-Le4JYD1FqHpUzvozb2L2ipqkRJmu8/
+  - src: /gcc19k8s
+    dest: https://gist.github.com/natefoo/16a68683b45a7bc4f0020cbf5240f5dc
+  - src: /gcc19arch
+    dest: https://docs.google.com/document/d/1u-HKEN_yoODEEGBeVBuxEvIxcrJGhtS98TQzhx84bHw/edit
+
+  # Miscellaneous
+
+  # Train the Trainer discussions
+  - src: /ttt
+    dest: https://docs.google.com/document/d/1E9VcFNh3nWeQq142szEy-NRHkqYIxFQglqbTaqiAXqQ/edit
+
+  # some things that should fail the "lint" tests
+  #- src: ^/fail1
+  #  dest: https://example.com/fail1
+  #- src: fail2
+  #  dest: https://example.com/fail2
+  #- src: /fail3
+  #  dest: gopher://example.com/fail3

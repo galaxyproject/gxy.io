@@ -1,0 +1,65 @@
+
+- name: Check
+  hosts: checkhosts
+  tasks:
+
+    - name: Basic rewrite syntax lint
+      ansible.builtin.assert:
+        that:
+          - not item.src.startswith('^')
+          - not item.src.endswith('/')
+          - item.src.startswith('/')
+          - item.dest.startswith('http')
+          - "' ' not in item.src"
+          - "' ' not in item.dest"
+        success_msg: "Rewrites pass basic syntax lint"
+        fail_msg: "Basic rewrite src must not start with '^' or end with '/', src must start with '/' and dest must start with 'http'"
+      loop: "{{ gxy_io_rewrites }}"
+
+    - name: Basic rewrite syntax lint
+      ansible.builtin.assert:
+        that:
+          - "' ' not in item.src"
+          - "' ' not in item.dest"
+      loop: "{{ gxy_io_raw_rewrites }}"
+
+    - name: Create nginx config tempfile
+      ansible.builtin.tempfile:
+        suffix: nginx.conf
+      register: __nginx_conf_tempfile
+
+    - name: Create gxy.io config tempfile
+      ansible.builtin.tempfile:
+        suffix: gxy.io
+      register: __gxy_io_tempfile
+
+    - name: Register gxy.io config path
+      ansible.builtin.set_fact:
+        __nginx_config_path: "{{ __nginx_conf_tempfile.path }}"
+        __gxy_io_config_path: "{{ __gxy_io_tempfile.path }}"
+
+    - block:
+
+        - name: Create nginx.conf
+          ansible.builtin.template:
+            src: nginx.conf.j2
+            dest: "{{ __nginx_config_path }}"
+            mode: "0644"
+
+        - name: Template gxy.io config
+          ansible.builtin.template:
+            src: gxy.io.j2
+            dest: "{{ __gxy_io_config_path }}"
+
+        - name: Check nginx config
+          ansible.builtin.command: nginx -c {{ __nginx_config_path }} -t
+
+      always:
+
+        - name: Remove tempfiles
+          ansible.builtin.file:
+            path: "{{ item }}"
+            state: absent
+          loop:
+            - "{{ __nginx_config_path }}"
+            - "{{ __gxy_io_config_path }}"

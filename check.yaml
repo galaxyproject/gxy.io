@@ -1,0 +1,52 @@
+
+- name: Check
+  hosts: checkhosts
+  tasks:
+
+    - name: Basic rewrite syntax lint
+      ansible.builtin.assert:
+        that:
+          - item.src.startswith('/')
+          - item.dest.startswith('http')
+          - "' ' not in item.src"
+          - "' ' not in item.dest"
+        success_msg: "Rewrite passes basic syntax lint"
+        fail_msg: "Rewrite fails basic syntax lint"
+      loop: "{{ gxy_io_rewrites }}"
+
+    - name: Create tempdir for Lambda function test
+      ansible.builtin.tempfile:
+        state: directory
+        suffix: gxy.io-test
+      register: __gxy_io_tempdir
+
+    - name: Register tempdir path
+      ansible.builtin.set_fact:
+        gxy_io_tempdir: "{{ __gxy_io_tempdir.path }}"
+        gxy_io_function_path: "{{ __gxy_io_tempdir.path }}/lambda_function.py"
+        gxy_io_rewrites_path: "{{ __gxy_io_tempdir.path }}/rewrites.json"
+
+    - block:
+
+        - name: Write rewrites test data
+          ansible.builtin.copy:
+            content: "{{ gxy_io_rewrites | to_json() }}"
+            dest: "{{ gxy_io_rewrites_path }}"
+            mode: "0644"
+
+        - name: Template gxy.io Lambda function
+          ansible.builtin.template:
+            src: lambda_function.py.j2
+            dest: "{{ gxy_io_function_path }}"
+
+        - name: Run tests
+          ansible.builtin.command: python3 {{ playbook_dir }}/tests/test_function.py {{ gxy_io_rewrites_path }}
+          environment:
+            PYTHONPATH: "{{ gxy_io_tempdir }}"
+
+      always:
+
+        - name: Remove tempdir
+          ansible.builtin.file:
+            path: "{{ gxy_io_tempdir }}"
+            state: absent

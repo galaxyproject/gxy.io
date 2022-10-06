@@ -1,0 +1,61 @@
+- name: Deploy Lambda Function
+  hosts: lambdahosts
+  tasks:
+
+    - name: Create tempdir for Lambda deployment package
+      ansible.builtin.tempfile:
+        state: directory
+        suffix: gxy.io-lambda
+      register: __gxy_io_tempdir
+
+    - name: Register tempdir path
+      ansible.builtin.set_fact:
+        gxy_io_tempdir: "{{ __gxy_io_tempdir.path }}"
+        gxy_io_function_path: "{{ __gxy_io_tempdir.path }}/lambda_function.py"
+        gxy_io_zip_path: "{{ __gxy_io_tempdir.path }}/lambda_function.zip"
+
+    - block:
+
+        - name: Template gxy.io Lambda function
+          ansible.builtin.template:
+            src: lambda_function.py.j2
+            dest: "{{ gxy_io_function_path }}"
+
+        - name: Create Lambda deployment package (zip)
+          community.general.archive:
+            format: zip
+            path:
+              - "{{ gxy_io_function_path }}"
+            dest: "{{ gxy_io_zip_path }}"
+
+        - name: Deploy Lambda function
+          community.aws.lambda:
+            name: "gxy-io-redirect"
+            state: present
+            zip_file: "{{ gxy_io_zip_path }}"
+            runtime: "python3.9"
+            role: "{{ gxy_io_lambda_exec_role_arn }}"
+            handler: "lambda_function.lambda_handler"
+            region: "us-east-1"
+          register: __gxy_io_lambda_deploy
+
+        - name: Set new ARN fact
+          set_fact:
+            gxy_io_lambda_arn: "{{ __gxy_io_lambda_deploy.configuration.function_arn }}"
+
+        - name: Update CloudFront distribution with new ARN
+          community.aws.cloudfront_distribution:
+            state: present
+            distribution_id: "{{ gxy_io_cloudfront_distribution_id }}"
+            default_cache_behavior:
+              lambda_function_associations:
+                - event_type: viewer-request
+                  lambda_function_arn: "{{ gxy_io_lambda_arn }}"
+          tags: cloudfront
+
+      always:
+
+        - name: Remove tempdir
+          ansible.builtin.file:
+            path: "{{ gxy_io_tempdir }}"
+            state: absent

@@ -1,0 +1,4 @@
+---
+
+gxy_io_lambda_exec_role_arn: "arn:aws:iam::601244181253:role/service-role/gxy-io-redirect-role-yixqncp4"
+gxy_io_cloudfront_distribution_id: "E2D6EUJ5L1POFJ"

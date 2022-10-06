@@ -1,0 +1,39 @@
+import re
+
+DEFAULT_LOCATION = "https://galaxyproject.org/"
+LOCATION_MAP = {
+{% for item in gxy_io_rewrites %}
+    "{{ item.src.rstrip('/') }}/?$": "{{ item.dest }}",
+{% endfor %}
+}
+
+
+def lambda_handler(event, context):
+    try:
+        uri = event["Records"][0]["cf"]["request"]["uri"]
+    except KeyError:
+        uri = None
+
+    location = None
+
+    if uri is not None:
+        for src, dest in LOCATION_MAP.items():
+            if re.match(src, uri):
+                location = dest
+                break
+
+    if location is None:
+        location = DEFAULT_LOCATION
+
+    response = {
+        "status": "302",
+        "statusDescription": "Found",
+        "headers": {
+            "location": [{
+                "key": "Location",
+                "value": location,
+            }]
+        }
+    }
+
+    return response

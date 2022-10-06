@@ -1,0 +1,5 @@
+[checkhosts]
+check ansible_connection=local
+
+[lambdahosts]
+lambda ansible_connection=local

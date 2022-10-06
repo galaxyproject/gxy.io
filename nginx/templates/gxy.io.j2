@@ -1,0 +1,23 @@
+##
+## This file is maintained by Ansible - CHANGES WILL BE OVERWRITTEN
+##
+
+server {
+    listen      *:443 ssl;
+    server_name gxy.io;
+
+    access_log  /var/log/nginx/gxy.io_access.log;
+    error_log   /var/log/nginx/gxy.io_error.log;
+
+{% for item in gxy_io_rewrites %}
+    rewrite ^{{ item.src }}/?$ {{ item.dest }}{{ (item.flags is defined) | ternary(' ', '') }}{{ item.flags | default('') }};
+{% endfor %}
+{% for redir in gxy_io_raw_rewrites %}
+    rewrite {{ item.src }} {{ item.dest }}{{ (item.flags is defined) | ternary(' ', '') }}{{ item.flags | default('') }};
+{% endfor %}
+
+    return 302 https://galaxyproject.org;
+
+}
+
+# vim: set filetype=nginx

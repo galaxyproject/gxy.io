@@ -51,7 +51,12 @@
               lambda_function_associations:
                 - event_type: viewer-request
                   lambda_function_arn: "{{ gxy_io_lambda_arn }}"
-          tags: cloudfront
+          # this can fail for a bit due to:
+          #   The function must be in an Active state. The current state for function arn:...:function:gxy-io-redirect:<new-version> is Pending
+          register: __gxy_io_cloudfront_deploy
+          until: __gxy_io_cloudfront_deploy is success
+          retries: 18
+          delay: 10
 
       always:
 

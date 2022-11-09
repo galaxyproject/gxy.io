@@ -54,6 +54,8 @@ gxy_io_rewrites:
     dest: https://docs.google.com/document/d/1u-HKEN_yoODEEGBeVBuxEvIxcrJGhtS98TQzhx84bHw/edit
 
   # Miscellaneous
+  - src: /test
+    dest: http://example.com
 
   # Train the Trainer discussions
   - src: /ttt

@@ -1,0 +1,42 @@
+name: Comment
+on:
+  workflow_run:
+    workflows:
+      - Check
+    types:
+      - completed
+
+jobs:
+
+  comment:
+    name: Comment on PR
+    runs-on: ubuntu-latest
+    if: >
+      github.event.workflow_run.event == 'pull_request'
+    steps:
+
+      - name: Download tapview results
+        uses: actions/download-artifact@v3
+        with:
+          name: test-results
+
+      - run: ls -lR
+
+      - name: Collect results for comment
+        run: |
+          echo 'TEST_RESULTS<<EOF' >> $GITHUB_ENV
+          cat test-results.txt >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+          echo "PR_NUMBER="$(cat PR)" >> $GITHUB_ENV
+
+      - name: Post comment to PR
+        uses: actions/github-script@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.issues.createComment({
+              issue_number: ${{ env.PR_NUMBER }},
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `${{ env.TEST_RESULTS }}`
+            })

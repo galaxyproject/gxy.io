@@ -18,23 +18,14 @@ jobs:
 
       - name: Run tapview
         if: success() || failure()
-        run: cat test-results.tap | ./.ci/tapview | tee test-results.txt
-
-      - name: Collect tapview output
-        if: (success() || failure()) && github.event_name == 'pull_request'
         run: |
-          echo 'TEST_RESULTS<<EOF' >> $GITHUB_ENV
-          cat test-results.txt >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
+          mkdir test-results
+          echo -n '${{ github.event.number }}' > test-results/PR
+          cat test-results.tap | ./.ci/tapview | tee test-results/test-results.txt
 
-      - uses: actions/github-script@v1
-        if: (success() || failure()) && github.event_name == 'pull_request'
+      - name: Upload tapview results
+        uses: actions/upload-artifact@v3
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            github.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: `${{ env.TEST_RESULTS }}`
-            })
+          name: test-results
+          path: test-results/
+          retention-days: 7

@@ -16,7 +16,7 @@ to other URLs, e.g. for publications, conference slides, etc.
     that the rewrite function appropriately rewrites paths matching your `src` to your `dest`. If unset, it defaults to
     the value of `src`.
 
-2. 
+2. Make a Pull Request with your changes. A test will make sure your syntax passes. Once your PR is approved and merged, the changes are automatically deployed.
 
 ## Notes
 

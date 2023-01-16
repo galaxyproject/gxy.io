@@ -72,3 +72,5 @@ gxy_io_rewrites:
   # Galaxy Smörgåsbord
   - src: /smorgasbord3
     dest: https://gallantries.github.io/video-library/events/smorgasbord3/
+  - src: /smorgasbord3-register
+    dest: https://forms.gle/opEM4kituMf7fXBm8

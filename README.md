@@ -57,8 +57,8 @@ Using backreferences in `dest` to rewrite any path after `/example/` to another 
 `src` and `dest` keys in `tests`:
 
 ```yaml
-- src: /example/(.*)
-  dest: http://example.org/\\1
+- src: "/example/(.*)"
+  dest: "http://example.org/\\1"
   tests:
     - src: /example/foo
       dest: http://example.org/foo

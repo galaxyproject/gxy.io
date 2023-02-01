@@ -86,15 +86,13 @@ def event_for_uri(uri):
 
 
 def test_rewrite(rewrite, test_collector):
-    for test_uri in rewrite.get("tests", [rewrite["src"]]):
-        event = event_for_uri(test_uri)
+    for test_def in rewrite.get("tests", [rewrite["src"]]):
+        if not isinstance(test_def, dict):
+            test_def = {"src": test_def, "dest": rewrite["dest"]}
+        event = event_for_uri(test_def["src"])
         location = lambda_handler(event, None)["headers"]["location"][0]["value"]
-        test_name = f"{test_uri}: {location} -> {rewrite['dest']}"
-        if '\\1' in rewrite['dest']:
-            # Skip tests with replacements?
-            test_collector.add_results(True, test_name)
-        else:
-            test_collector.add_results(location == rewrite["dest"], test_name)
+        test_name = f"{test_def['src']}: {location} -> {test_def['dest']}"
+        test_collector.add_results(location == test_def["dest"], test_name)
 
 
 def main():

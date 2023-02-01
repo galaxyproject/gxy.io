@@ -3,7 +3,7 @@ import re
 DEFAULT_LOCATION = "https://galaxyproject.org/"
 LOCATION_MAP = {
 {% for item in gxy_io_rewrites %}
-    "{{ item.src.rstrip('/') }}/?$": "{{ item.dest }}",
+    r"{{ item.src.rstrip('/') }}/?$": r"{{ item.dest }}",
 {% endfor %}
 }
 
@@ -18,8 +18,11 @@ def lambda_handler(event, context):
 
     if uri is not None:
         for src, dest in LOCATION_MAP.items():
-            if re.match(src, uri):
+            m = re.match(src, uri)
+            if m:
                 location = dest
+                if len(m.groups()):
+                    location = re.sub(src, dest, uri)
                 break
 
     if location is None:

@@ -87,10 +87,10 @@ gxy_io_rewrites:
       - /smorgasbord-slack
 
   # GTN Short URLs
-  - src: "/t/(.*)"
+  - src: "/(t|gtn)/(.*)"
     dest: "https://training.galaxyproject.org/training-material/short/\\1"
     tests:
-      - src: /t/ansible-galaxy
+      - src: /gtn/1
+        dest: https://training.galaxyproject.org/training-material/short/1
+      - src: /gtn/ansible-galaxy
         dest: https://training.galaxyproject.org/training-material/short/ansible-galaxy
-      - src: /t/galaxy-intro-101
-        dest: https://training.galaxyproject.org/training-material/short/galaxy-intro-101

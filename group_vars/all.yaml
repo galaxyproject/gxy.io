@@ -87,7 +87,7 @@ gxy_io_rewrites:
       - /smorgasbord-slack
 
   # GTN Short URLs
-  - src: "/(t|gtn)/(.*)"
+  - src: "/gtn/(.*)/?"
     dest: "https://training.galaxyproject.org/training-material/short/\\1"
     tests:
       - src: /gtn/1

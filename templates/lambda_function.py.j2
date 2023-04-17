@@ -18,7 +18,7 @@ def lambda_handler(event, context):
 
     if uri is not None:
         for src, dest in LOCATION_MAP.items():
-            m = re.match(src, uri)
+            m = re.match(src, uri, flags=re.IGNORECASE)
             if m:
                 location = dest
                 if len(m.groups()):

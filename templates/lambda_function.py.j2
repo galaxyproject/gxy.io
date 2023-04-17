@@ -22,7 +22,7 @@ def lambda_handler(event, context):
             if m:
                 location = dest
                 if len(m.groups()):
-                    location = re.sub(src, dest, uri)
+                    location = re.sub(src, dest, uri, flags=re.IGNORECASE)
                 break
 
     if location is None:

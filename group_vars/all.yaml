@@ -9,6 +9,10 @@ gxy_io_rewrites:
   - src: /bcc
     dest: https://live.remo.co/e/bcc-2020
 
+  # Code of Conduct
+  - src: /coc
+    dest: https://galaxyproject.org/community/coc/
+
   # Galaxy Admin Training
   - src: /gat
     dest: https://github.com/galaxyproject/admin-training/

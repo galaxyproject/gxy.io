@@ -57,6 +57,8 @@ gxy_io_rewrites:
     dest: https://gist.github.com/natefoo/16a68683b45a7bc4f0020cbf5240f5dc
   - src: /gcc19arch
     dest: https://docs.google.com/document/d/1u-HKEN_yoODEEGBeVBuxEvIxcrJGhtS98TQzhx84bHw/edit
+  - src: /p/tiaas
+    dest: https://doi.org/10.1093/gigascience/giad048
 
   # Miscellaneous
   - src: /test

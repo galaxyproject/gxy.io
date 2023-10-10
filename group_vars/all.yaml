@@ -67,6 +67,8 @@ gxy_io_rewrites:
   # Miscellaneous
   - src: /test
     dest: http://example.com
+  - src: /kui
+    dest: https://lookerstudio.google.com/u/0/reporting/8cfee054-2ddd-4711-af5a-a7a8d62076bb/page/nrqdD
 
   # Train the Trainer discussions
   - src: /ttt

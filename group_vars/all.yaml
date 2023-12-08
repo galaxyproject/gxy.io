@@ -53,6 +53,8 @@ gxy_io_rewrites:
     dest: https://docs.google.com/presentation/d/1vDNKL4I2OoQDg6gJg2hx2Do2L94tdcIrcuJAMOM2zMc/
   - src: /nate/egd2022gravity
     dest: https://docs.google.com/presentation/d/1_GPs99bPgS9mm-Le4JYD1FqHpUzvozb2L2ipqkRJmu8/
+  - src: /nate/gi2023
+    dest: https://docs.google.com/presentation/d/1RYnTQjtQ_iOKs6UPDZbfS9cUgxjItYLUe5rIfQ0y5Do/
   - src: /gcc19k8s
     dest: https://gist.github.com/natefoo/16a68683b45a7bc4f0020cbf5240f5dc
   - src: /gcc19arch

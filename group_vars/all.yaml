@@ -109,3 +109,21 @@ gxy_io_rewrites:
         dest: https://training.galaxyproject.org/training-material/short/T00001
       - src: /GTN:ansible-galaxy
         dest: https://training.galaxyproject.org/training-material/short/ansible-galaxy
+
+  #####################################
+  # Publications with links to Galaxy
+  #####################################
+
+  #
+  # Title: In vivo detection of DNA secondary structures using Permanganate/S1 Footprinting with Direct Adapter Ligation and Sequencing (PDAL-Seq)
+  # BioRxiv: https://www.biorxiv.org/content/10.1101/2023.11.28.569002v1
+  # Prefix: pdal-seq
+  #
+  - src: /pdal-seq-data
+    dest: https://usegalaxy.org/u/kaivan/h/pdal-seq-data
+  - src: /pdal-seq-pipeline
+    dest: https://usegalaxy.org/u/kaivan/h/pdal-seq-collection-1
+  - src: /pdal-seq-histogram
+    dest: https://usegalaxy.org/u/kaivan/h/pdal-seq-histogram
+  - src: /pdal-seq-non-b
+    dest: https://usegalaxy.org/u/kaivan/h/pdal-seq-non-b-dna-annotations

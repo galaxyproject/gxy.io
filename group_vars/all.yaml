@@ -59,6 +59,11 @@ gxy_io_rewrites:
     dest: https://gist.github.com/natefoo/16a68683b45a7bc4f0020cbf5240f5dc
   - src: /gcc19arch
     dest: https://docs.google.com/document/d/1u-HKEN_yoODEEGBeVBuxEvIxcrJGhtS98TQzhx84bHw/edit
+  
+  # PAG-related talks
+  # PAG 2024
+  - src: /pag24-workshop
+    dest: https://docs.google.com/presentation/d/13Cru2cB4ujJx0zhmw3Q-AybNDhK6wRDCjIIFgDfmbxY/edit?usp=sharing
   - src: /pag24-asmt
     dest: https://docs.google.com/presentation/d/1uUzxQRhfC2Z4LcbQ9FrrLOKB4hfDwvOx15DGxbmBghM/edit?usp=sharing
 

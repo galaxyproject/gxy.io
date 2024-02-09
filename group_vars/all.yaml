@@ -117,6 +117,10 @@ gxy_io_rewrites:
       - src: /GTN:ansible-galaxy
         dest: https://training.galaxyproject.org/training-material/short/ansible-galaxy
 
+  # TPV shared database
+  - src: /tpv/db.yml
+    dest: https://raw.githubusercontent.com/galaxyproject/tpv-shared-database/main/tools.yml
+
   #####################################
   # Publications with links to Galaxy
   #####################################

@@ -118,7 +118,7 @@ gxy_io_rewrites:
         dest: https://training.galaxyproject.org/training-material/short/ansible-galaxy
 
   # TPV shared database
-  - src: /tpv/shared_db.yml
+  - src: /tpv/db.yml
     dest: https://raw.githubusercontent.com/galaxyproject/tpv-shared-database/main/tools.yml
 
   #####################################

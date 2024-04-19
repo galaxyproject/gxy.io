@@ -121,6 +121,10 @@ gxy_io_rewrites:
   - src: /tpv/db.yml
     dest: https://raw.githubusercontent.com/galaxyproject/tpv-shared-database/main/tools.yml
 
+  # UseGalaxy.org colabfold request form
+  - src: /colabfold
+    dest: https://forms.gle/CNxB645USKC4gT9k6
+
   #####################################
   # Publications with links to Galaxy
   #####################################

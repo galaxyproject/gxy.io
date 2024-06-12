@@ -101,6 +101,14 @@ gxy_io_rewrites:
   - src: /smorgasbord3-register
     dest: https://forms.gle/opEM4kituMf7fXBm8
 
+  # Community paages
+  - src: /c/ssa
+    dest: https://galaxyproject.org/community/sig/small-scale-admins/
+  - src: /c/gga
+    dest: https://galaxyproject.org/community/sig/genome-annotation/
+  - src: /c/spoc
+    dest: https://galaxyproject.org/community/sig/singlecell/
+
   # GTN Slack Space
   - src: /(gtn|smorg|smorgasbord)-?slack
     dest: https://join.slack.com/t/gtnsmrgsbord/shared_invite/zt-1vuywk2t2-5FFAfFU1JImaulNGz4DMcw

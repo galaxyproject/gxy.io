@@ -137,6 +137,10 @@ gxy_io_rewrites:
   - src: /colabfold
     dest: https://forms.gle/CNxB645USKC4gT9k6
 
+  # WBF slides
+  - src: /wbf-24
+    dest: https://docs.google.com/presentation/d/1fPAlA2rzafG97lZhsAueDGYoepV7wUHnyf6JIHP8d24/edit?usp=sharing
+
   #####################################
   # Publications with links to Galaxy
   #####################################

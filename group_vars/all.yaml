@@ -101,9 +101,9 @@ gxy_io_rewrites:
   - src: /smorgasbord3-register
     dest: https://forms.gle/opEM4kituMf7fXBm8
 
- # Galaxy Training Academy
- - src: /GTA1-trainer
-   dest: https://galaxyproject.org/news/2024-05-29-galaxy-training-academy-call-contribution/
+  # Galaxy Training Academy
+  - src: /GTA1-trainer
+    dest: https://galaxyproject.org/news/2024-05-29-galaxy-training-academy-call-contribution/
 
 
   # Community paages

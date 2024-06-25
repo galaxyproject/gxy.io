@@ -34,7 +34,7 @@ rewrites](group_vars/all.yaml).
 ## Examples
 
 A simple example that does not use regex, rewrites `http://gxy.io/example` (with or without trailing slash) to
-`http://example.org . The implied test ensures that the `src` value rewrites to `dest`:
+`http://example.org`. The implied test ensures that the `src` value rewrites to `dest`:
 
 ```yaml
 - src: /example

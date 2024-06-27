@@ -112,7 +112,6 @@ gxy_io_rewrites:
   - src: /GTA1-trainer
     dest: https://galaxyproject.org/news/2024-05-29-galaxy-training-academy-call-contribution/
 
-
   # Community paages
   - src: /c/ssa
     dest: https://galaxyproject.org/community/sig/small-scale-admins/
@@ -120,6 +119,8 @@ gxy_io_rewrites:
     dest: https://galaxyproject.org/community/sig/genome-annotation/
   - src: /c/spoc
     dest: https://galaxyproject.org/community/sig/singlecell/
+  - src: /relicense
+    dest: https://github.com/galaxyproject/galaxy/pull/16970#issuecomment-1791598501
 
   # GTN Slack Space
   - src: /(gtn|smorg|smorgasbord)-?slack

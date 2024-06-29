@@ -154,6 +154,10 @@ gxy_io_rewrites:
   - src: /wbf-24
     dest: https://docs.google.com/presentation/d/1fPAlA2rzafG97lZhsAueDGYoepV7wUHnyf6JIHP8d24/edit?usp=sharing
 
+  # UseGalaxy.org subdomain welcome
+  - src: /usegalaxy-org-welcome-singlecell
+    dest: https://site.usegalaxy.org.au/lab/export?content_root=https://raw.githubusercontent.com/nomadscientist/Lab_testing/main/lab_test.yml
+
   #####################################
   # Publications with links to Galaxy
   #####################################

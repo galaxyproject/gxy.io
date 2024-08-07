@@ -162,7 +162,7 @@ gxy_io_rewrites:
 
   # UseGalaxy.org subdomain welcome
   - src: /usegalaxy-org-welcome-singlecell
-    dest: https://site.usegalaxy.org.au/lab/export?content_root=https://raw.githubusercontent.com/nomadscientist/galaxy_codex/subdomain_unification/subdomains/singlecell/usegalaxy.org.yml
+    dest: https://site.usegalaxy.org.au/lab/export?content_root=https://raw.githubusercontent.com/nomadscientist/galaxy_codex/galaxy_labs/subdomains/singlecell/usegalaxy.org.yml
 
   # Kubernetes related links.  Also see /k8s/deploy and /k8s/manage in the admin tutorials above.
   - src: /k8s/charts

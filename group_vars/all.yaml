@@ -102,7 +102,7 @@ gxy_io_rewrites:
 
   # Releases
   - src: /r/v24.1
-    dest: https://galaxyproject.org/news/2024-06-20-24-1-release/
+    dest: https://docs.galaxyproject.org/en/master/releases/24.1_announce_user.html
 
   # some things that should fail the "lint" tests
   #- src: ^/fail1

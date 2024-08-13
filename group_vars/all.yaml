@@ -100,6 +100,10 @@ gxy_io_rewrites:
   - src: /ttt
     dest: https://docs.google.com/document/d/1E9VcFNh3nWeQq142szEy-NRHkqYIxFQglqbTaqiAXqQ/edit
 
+  # Releases
+  - src: /r/v24.1
+    dest: https://galaxyproject.org/news/2024-06-20-24-1-release/
+
   # some things that should fail the "lint" tests
   #- src: ^/fail1
   #  dest: https://example.com/fail1

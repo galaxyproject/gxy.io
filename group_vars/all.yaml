@@ -177,7 +177,7 @@ gxy_io_rewrites:
   # ASM-related talks
   # ASM-NGS 2024 slides
   - src: /asm-ngs-24
-    dest: https://docs.google.com/presentation/d/1e9P9y8X9ve-oI3Sg7I1qaulG8REaEFp7krC5W9D1T0g/edit#slide=id.g30a835d7bca_1_251
+    dest: https://docs.google.com/presentation/d/1e9P9y8X9ve-oI3Sg7I1qaulG8REaEFp7krC5W9D1T0g/edit?usp=sharing
 
   #####################################
   # Publications with links to Galaxy

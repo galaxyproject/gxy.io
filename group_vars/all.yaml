@@ -196,3 +196,11 @@ gxy_io_rewrites:
     dest: https://usegalaxy.org/u/kaivan/h/pdal-seq-histogram
   - src: /pdal-seq-non-b
     dest: https://usegalaxy.org/u/kaivan/h/pdal-seq-non-b-dna-annotations
+
+
+  ###################################
+  # Zoom link shorters
+  ###################################
+  - src: /zoom-brc-24-10-30
+    dest: https://psu.zoom.us/j/99331380856?pwd=ktUUark52KveSfI824OPn5Rglfb3Wi.1
+

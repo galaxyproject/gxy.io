@@ -185,8 +185,6 @@ gxy_io_rewrites:
     tests:
       - /ludwig-mnist-tutorial
       - /ludwig_mnist_tutorial
-      - /ludwigmnisttutorial
-      - /ludwig-mnist
 
   #####################################
   # Publications with links to Galaxy

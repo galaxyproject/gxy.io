@@ -179,6 +179,13 @@ gxy_io_rewrites:
   - src: /asm-ngs-24
     dest: https://docs.google.com/presentation/d/1e9P9y8X9ve-oI3Sg7I1qaulG8REaEFp7krC5W9D1T0g/edit?usp=sharing
 
+  # GTN - Tutorial for Ludwig - MNIST
+  - src: /ludwig[-_]mnist[-_]tutorial
+    dest: https://training.galaxyproject.org/training-material/topics/statistics/tutorials/galaxy-ludwig/tutorial.html
+    tests:
+      - /ludwig-mnist-tutorial
+      - /ludwig_mnist_tutorial
+
   #####################################
   # Publications with links to Galaxy
   #####################################

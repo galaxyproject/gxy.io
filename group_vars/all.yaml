@@ -16,6 +16,10 @@ gxy_io_rewrites:
     dest: https://hackmd.io/@nekrut/Sym3WBgwA
   - src: /br24
     dest: https://hackmd.io/@nekrut/B1xxYVLz1e
+  - src: /udd24
+    dest: https://hackmd.io/@nekrut/Sk8k6CHQ1e
+  - src: /ucc24
+    dest: https://hackmd.io/@nekrut/ByJD0AHXke
     
 
   # Code of Conduct

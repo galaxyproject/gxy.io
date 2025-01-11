@@ -87,6 +87,8 @@ gxy_io_rewrites:
   #PAG 2025
   - src: /pag25-webpage
     dest: https://plan.core-apps.com/pag32/event/ccb7e3a674d26e5273e1670285bf9f7f
+  - src: /vgp-dockstore
+    dest: https://dockstore.org/organizations/iwc/collections/vgp
 
   # Papers
   - src: /scholar

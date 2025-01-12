@@ -29,7 +29,7 @@
             dest: "{{ gxy_io_zip_path }}"
 
         - name: Deploy Lambda function
-          community.aws.lambda:
+          amazon.aws.lambda:
             name: "gxy-io-redirect"
             state: present
             zip_file: "{{ gxy_io_zip_path }}"

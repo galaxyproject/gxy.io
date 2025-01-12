@@ -37,6 +37,7 @@
             role: "{{ gxy_io_lambda_exec_role_arn }}"
             handler: "lambda_function.lambda_handler"
             region: "us-east-1"
+          no_log: true
           register: __gxy_io_lambda_deploy
 
         - name: Set new ARN fact

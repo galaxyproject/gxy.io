@@ -6,6 +6,7 @@ on:
     paths:
       - 'group_vars/**'
       - 'templates/lambda_function.py.j2'
+  workflow_dispatch:
 
 jobs:
   deploy:

@@ -90,6 +90,10 @@ gxy_io_rewrites:
   - src: /vgp-dockstore
     dest: https://dockstore.org/organizations/iwc/collections/vgp
 
+  #JXTX shortener
+  - src: /jxtxbog25
+    dest: https://jxtxfoundation.org/news/2025-2-4-bg/
+
   # Papers
   - src: /scholar
     dest: https://scholar.google.com/citations?hl=en&user=3tSiRGoAAAAJ

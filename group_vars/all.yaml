@@ -139,6 +139,10 @@ gxy_io_rewrites:
     dest: https://galaxyproject.org/news/2024-05-29-galaxy-training-academy-call-contribution/
   - src: /GTA1
     dest: https://training.galaxyproject.org/training-material/events/galaxy-academy-2024.html
+  - src: /GTA2025-trainer
+    dest: https://forms.gle/V9QqSDNg2UmQaDHy8
+  - src: /GTA2025
+    dest: https://training.galaxyproject.org/training-material/events/2025-05-12-galaxy-academy-2025.html
 
   # Community paages
   - src: /c/ssa

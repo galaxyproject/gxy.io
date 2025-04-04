@@ -208,6 +208,12 @@ gxy_io_rewrites:
       - /ludwig-mnist-tutorial
       - /ludwig_mnist_tutorial
 
+  # Galaxy Team Meeting Materials
+  - src: /gtm25spring-agenda
+    dest: https://docs.google.com/document/d/1QF67M4mJ3hD5qQiei4wAdVfUUDtHaz2XdC2pvEJHCoI/edit?usp=sharing
+  - src: /gtm25spring-slides
+    dest: https://docs.google.com/presentation/d/1wXwiI8aS3v2aETo3K-A4pOG3u6AXcrqZXkuaq41o4XI/edit?usp=sharing
+
   #####################################
   # Publications with links to Galaxy
   #####################################

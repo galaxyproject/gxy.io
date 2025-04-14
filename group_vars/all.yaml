@@ -51,6 +51,8 @@ gxy_io_rewrites:
     dest: https://training.galaxyproject.org/training-material/topics/admin/tutorials/k8s-deploying-galaxy/tutorial.html
   - src: /k8s/manage
     dest: https://training.galaxyproject.org/training-material/topics/admin/tutorials/k8s-managing-galaxy/tutorial.html
+  - src: /gat-questionnaire
+    dest: https://docs.google.com/forms/d/e/1FAIpQLSed-4aY8bREeTFyrXyY37nCtw6UioNzPRGBLnFBR8CeXQaVBA/viewform
 
   # Matrix/Gitter channels
   - src: /admin-?chat

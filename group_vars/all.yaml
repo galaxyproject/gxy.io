@@ -200,6 +200,8 @@ gxy_io_rewrites:
   # ASM-NGS 2024 slides
   - src: /asm-ngs-24
     dest: https://docs.google.com/presentation/d/1e9P9y8X9ve-oI3Sg7I1qaulG8REaEFp7krC5W9D1T0g/edit?usp=sharing
+  - src: /ncat-25
+    dest: https://docs.google.com/presentation/d/1tUw-yuLTBVezHl-E081m2qOOf8zKEQ0WMLRDYHaYOEY/edit?usp=sharing
 
   # GTN - Tutorial for Ludwig - MNIST
   - src: /ludwig[-_]mnist[-_]tutorial

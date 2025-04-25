@@ -158,7 +158,7 @@ gxy_io_rewrites:
 
   # GTN Slack Space
   - src: /(gtn|smorg|smorgasbord)-?slack
-    dest: https://join.slack.com/t/gtnsmrgsbord/shared_invite/zt-32k3rcvr9-1WF7BAjnLEAqtXX3p_2gRA
+    dest: https://join.slack.com/t/gtnsmrgsbord/shared_invite/zt-346ov3amf-~tmcembPgL5AKDBko0l~Ww
     tests:
       - /gtnslack
       - /gtn-slack

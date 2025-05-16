@@ -93,7 +93,7 @@ gxy_io_rewrites:
     dest: https://dockstore.org/organizations/iwc/collections/vgp
 
   #VGP-realted things
-  - src: /Phase1-data
+  - src: /phase1-data
     dest: https://docs.google.com/presentation/d/1tZmgUFDOhFhePVD7Y35mguiUyQSWyKfg_OZrNFrlJQI/edit?usp=sharing
   - src: /phase1-data-access
     dest: https://github.com/VGP/vgp-phase1/tree/main/data/jetstream2

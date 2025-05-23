@@ -179,7 +179,7 @@ gxy_io_rewrites:
       - /smorgasbordslack
       - /smorgasbord-slack
 
-  # Galaxy Training Academy
+  # Galaxy Training Network homepage for flyers
   - src: /GTN
     dest: https://training.galaxyproject.org/training-material/
 

@@ -179,6 +179,11 @@ gxy_io_rewrites:
       - /smorgasbordslack
       - /smorgasbord-slack
 
+  # Galaxy Training Academy
+  - src: /GTN
+    dest: https://training.galaxyproject.org/training-material/
+
+
   # GTN Short URLs
   - src: "/GTN:(.*)"
     dest: "https://training.galaxyproject.org/training-material/short/\\1"

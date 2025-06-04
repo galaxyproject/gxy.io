@@ -260,3 +260,11 @@ gxy_io_rewrites:
   - src: /zoom-brc-24-10-30
     dest: https://psu.zoom.us/j/99331380856?pwd=ktUUark52KveSfI824OPn5Rglfb3Wi.1
 
+
+  #####################################
+  # Referrer Partners
+  #####################################
+
+  # General link
+  - src: /referrer-partner
+    dest: http://www.galaxyproject.org?utm_source=goats

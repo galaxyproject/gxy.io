@@ -60,6 +60,11 @@ gxy_io_rewrites:
     tests:
       - /adminchat/
       - /admin-chat
+  - src: /dev-?chat
+    dest: https://matrix.to/#/#galaxyproject_dev:gitter.im
+    tests:
+      - /devchat/
+      - /dev-chat
 
   # Project member personal redirects
   - src: /nate/ccbb2018

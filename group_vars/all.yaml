@@ -22,6 +22,8 @@ gxy_io_rewrites:
     dest: https://hackmd.io/@nekrut/ByJD0AHXke
   - src: /gbcc25
     dest: https://gbcc2025.bioconductor.org/
+  - src: /gbcc25-intro
+    dest: https://docs.google.com/presentation/d/12gZypuJMeDMVnKQetCczpcLSYjkQ9cG3D8M0r3Zvjk0/edit?usp=sharing
     
 
   # Code of Conduct

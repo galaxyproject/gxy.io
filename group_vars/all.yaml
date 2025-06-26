@@ -140,6 +140,8 @@ gxy_io_rewrites:
   # Releases
   - src: /r/v24.1
     dest: https://docs.galaxyproject.org/en/master/releases/24.1_announce_user.html
+  - src: /r/v25.0
+    dest: https://docs.galaxyproject.org/en/master/releases/25.0_announce_user.html
 
   # some things that should fail the "lint" tests
   #- src: ^/fail1

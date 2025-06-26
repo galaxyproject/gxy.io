@@ -69,6 +69,8 @@ gxy_io_rewrites:
     tests:
       - /devchat/
       - /dev-chat
+  - src: /chat
+    dest: https://matrix.to/#/#galaxyproject_Lobby:gitter.im
 
   # Project member personal redirects
   - src: /nate/ccbb2018
@@ -279,8 +281,3 @@ gxy_io_rewrites:
   # General link
   - src: /referrer-partner
     dest: http://www.galaxyproject.org?utm_source=goats
-
-# Matrix
-  - src: /matrix
-    dest: https://matrix.to/#/#galaxyproject_Lobby:gitter.im
-

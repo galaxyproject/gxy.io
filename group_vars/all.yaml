@@ -208,6 +208,15 @@ gxy_io_rewrites:
 
   # TPV shared database
   - src: /tpv/db.yml
+    dest: https://raw.githubusercontent.com/galaxyproject/tpv-shared-database/9ec8ff26012db320bbaeac9b678499000d2af421/tools.yml
+
+  - src: /tpv/db-v1.yml
+    dest: https://raw.githubusercontent.com/galaxyproject/tpv-shared-database/9ec8ff26012db320bbaeac9b678499000d2af421/tools.yml
+
+  - src: /tpv/db-v2.yml
+    dest: https://raw.githubusercontent.com/galaxyproject/tpv-shared-database/main/tools.yml
+
+  - src: /tpv/db-latest.yml
     dest: https://raw.githubusercontent.com/galaxyproject/tpv-shared-database/main/tools.yml
 
   # UseGalaxy.org colabfold request form

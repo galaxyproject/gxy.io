@@ -136,6 +136,8 @@ gxy_io_rewrites:
     dest: https://lookerstudio.google.com/u/0/reporting/8cfee054-2ddd-4711-af5a-a7a8d62076bb/page/nrqdD
   - src: /cloud-costs
     dest: https://lookerstudio.google.com/reporting/39b92046-409d-40b4-9463-ca50d5b2c1a1
+  - src: /sustainability
+    dest: https://docs.google.com/document/d/1jzNKIHcPF6a75Q24COcFJUR1q_OdUqcyOXPJD7eHVvg/view
 
   # Train the Trainer discussions
   - src: /ttt

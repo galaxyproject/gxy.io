@@ -28,6 +28,8 @@ gxy_io_rewrites:
     dest: https://docs.google.com/presentation/d/12gZypuJMeDMVnKQetCczpcLSYjkQ9cG3D8M0r3Zvjk0/edit?usp=sharing
   - src: /gbcc25-iwc
     dest: https://docs.google.com/presentation/d/1I8sfriLhLA2u9cVg1rP7pFgjXF2rOqK2iM9uclDBSdc/edit?usp=sharing
+  - src: /jobim2025
+    dest: https://docs.google.com/presentation/d/1BtDPoJ5XtC1wGre2973oDlhcXDqmxL_XojW4qwWKFnY/edit?usp=sharing
     
 
   # Code of Conduct

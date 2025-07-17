@@ -139,7 +139,7 @@ gxy_io_rewrites:
   - src: /cloud-costs
     dest: https://lookerstudio.google.com/reporting/39b92046-409d-40b4-9463-ca50d5b2c1a1
   - src: /sustainability
-    dest: https://docs.google.com/document/d/1jzNKIHcPF6a75Q24COcFJUR1q_OdUqcyOXPJD7eHVvg/view
+    dest: https://doi.org/10.5281/zenodo.16030329
 
   # Train the Trainer discussions
   - src: /ttt

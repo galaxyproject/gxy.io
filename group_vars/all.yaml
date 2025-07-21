@@ -32,7 +32,7 @@ gxy_io_rewrites:
     dest: https://docs.google.com/presentation/d/1BtDPoJ5XtC1wGre2973oDlhcXDqmxL_XojW4qwWKFnY/edit?usp=sharing
     # International society for primatology
   - scr: /ips25
-    desc: https://docs.google.com/presentation/d/17Us-WNuEjtXz-Mi8TqdEBKwEy1FXT_X6-R3TSE68hSk/edit?usp=sharing
+    dest: https://docs.google.com/presentation/d/17Us-WNuEjtXz-Mi8TqdEBKwEy1FXT_X6-R3TSE68hSk/edit?usp=sharing
     
 
   # Code of Conduct

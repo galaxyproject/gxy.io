@@ -143,6 +143,8 @@ gxy_io_rewrites:
     dest: https://lookerstudio.google.com/reporting/39b92046-409d-40b4-9463-ca50d5b2c1a1
   - src: /sustainability
     dest: https://doi.org/10.5281/zenodo.16030329
+  - src: /stats-eu-elixir
+    dest: https://stats.galaxyproject.eu/d/xxeOsZiVz/elixir
 
   # Train the Trainer discussions
   - src: /ttt

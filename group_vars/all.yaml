@@ -33,6 +33,8 @@ gxy_io_rewrites:
     # International society for primatology
   - src: /ips25
     dest: https://docs.google.com/presentation/d/17Us-WNuEjtXz-Mi8TqdEBKwEy1FXT_X6-R3TSE68hSk/edit?usp=sharing
+  - src: /jki-2025
+    dest: https://docs.google.com/presentation/d/1gEEsNWAhKqZXrvUDN63Gj9WWlwnjJ0AQkZvyIZFdOsM
     
 
   # Code of Conduct

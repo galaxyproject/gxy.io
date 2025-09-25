@@ -305,3 +305,7 @@ gxy_io_rewrites:
   # General link
   - src: /referrer-partner
     dest: http://www.galaxyproject.org?utm_source=goats
+
+  # BRC-Analytics related
+  - src: /brc-webinar-reg
+    dest: https://forms.office.com/Pages/ResponsePage.aspx?id=8WfZJNg-SES6plYOxXKss8gM98-9jH9MgRdwq7CpaB5URVVKRFpaV0tCOUQxSFRQUzlGVEhFVjJHUi4u

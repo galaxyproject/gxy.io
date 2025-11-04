@@ -129,7 +129,7 @@ gxy_io_rewrites:
   - src: /jxtxbog25
     dest: https://jxtxfoundation.org/news/2025-2-4-bg/
   - src: /jxtxlogo
-    desc: https://docs.google.com/presentation/d/1nYeOTDErh5cZAg9JlPs6RTy94sZEilDoMntOt_GifL0/edit?usp=sharing
+    dest: https://docs.google.com/presentation/d/1nYeOTDErh5cZAg9JlPs6RTy94sZEilDoMntOt_GifL0/edit?usp=sharing
 
   # Papers
   - src: /scholar

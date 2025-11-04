@@ -128,6 +128,8 @@ gxy_io_rewrites:
   #JXTX shortener
   - src: /jxtxbog25
     dest: https://jxtxfoundation.org/news/2025-2-4-bg/
+  - src: /jxtxlogo
+    dest: https://docs.google.com/presentation/d/1nYeOTDErh5cZAg9JlPs6RTy94sZEilDoMntOt_GifL0/edit?usp=sharing
 
   # Papers
   - src: /scholar

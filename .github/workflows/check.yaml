@@ -1,10 +1,11 @@
 name: Check
 on:
-  pull_request:
+  pull_request_target:
     types:
       - opened
       - synchronize
       - reopened
+
 jobs:
 
   check:
@@ -12,25 +13,27 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      pull-requests: write
     steps:
 
-      - name: Checkout code
+      - name: Checkout PR code
         uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Run check
         run: ansible-playbook -i hosts check.yaml
 
-      - name: Generate test results
+      - name: Post comment to PR
         if: success() || failure()
-        run: |
-          cat test-results.tap | ./.ci/tapview | tee test-results.txt
-          echo "${{ github.event.number }}" > pr-number.txt
-
-      - name: Upload test results
-        if: success() || failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/github-script@v8
         with:
-          name: test-results
-          path: |
-            test-results.txt
-            pr-number.txt
+          script: |
+            const { execSync } = require('child_process');
+            const body = execSync('cat test-results.tap | ./.ci/tapview', { encoding: 'utf8' });
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: body
+            });

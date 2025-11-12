@@ -12,8 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: write
-      issues: write
     steps:
 
       - name: Checkout code
@@ -22,16 +20,17 @@ jobs:
       - name: Run check
         run: ansible-playbook -i hosts check.yaml
 
-      - name: Post comment to PR
+      - name: Generate test results
         if: success() || failure()
-        uses: actions/github-script@v8
+        run: |
+          cat test-results.tap | ./.ci/tapview | tee test-results.txt
+          echo "${{ github.event.number }}" > pr-number.txt
+
+      - name: Upload test results
+        if: success() || failure()
+        uses: actions/upload-artifact@v4
         with:
-          script: |
-            const { execSync } = require('child_process');
-            const body = execSync('cat test-results.tap | ./.ci/tapview', { encoding: 'utf8' });
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-              body: body
-            });
+          name: test-results
+          path: |
+            test-results.txt
+            pr-number.txt

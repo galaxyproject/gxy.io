@@ -157,7 +157,7 @@ gxy_io_rewrites:
   - src: /eosc-node-poland-demo.mp4
     dest: https://data.eosc.pl/api/v3/onezone/shares/data/00000000007EC1E1736861726547756964236439643032363330323632373564613833386663666232343433653864643335636862373862233938653462646664623331363533396334346534636637613034633034346162636832353663236438343133343435613534666239666562356436636537623837623234373531636831316130/content
   - src: /eosc-node-poland-demo
-    dest: https://usegalaxy.eu/static/share/eosc/eosc-node-poland-demo.mp4
+    dest: https://www.youtube.com/watch?v=826burTjOEU
   - src: /berd-eosc25
     dest: https://usegalaxy.eu/static/share/eosc/berd_eosc25.webm
   - src: /stats-eu-elixir

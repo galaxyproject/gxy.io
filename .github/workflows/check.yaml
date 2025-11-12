@@ -1,31 +1,36 @@
 name: Check
-on: [pull_request]
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
 jobs:
 
   check:
     name: Check rewrite function
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
     steps:
 
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.9'
+      - name: Checkout code
+        uses: actions/checkout@v5
 
       - name: Run check
         run: ansible-playbook -i hosts check.yaml
 
-      - name: Run tapview
+      - name: Post comment to PR
         if: success() || failure()
-        run: |
-          mkdir test-results
-          echo -n '${{ github.event.number }}' > test-results/PR
-          cat test-results.tap | ./.ci/tapview | tee test-results/test-results.txt
-
-      - name: Upload tapview results
-        uses: actions/upload-artifact@v4
+        uses: actions/github-script@v8
         with:
-          name: test-results
-          path: test-results/
-          retention-days: 7
+          script: |
+            const { execSync } = require('child_process');
+            const body = execSync('cat test-results.tap | ./.ci/tapview', { encoding: 'utf8' });
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: body
+            });

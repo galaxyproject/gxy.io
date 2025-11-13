@@ -81,6 +81,8 @@ gxy_io_rewrites:
       - /dev-chat
   - src: /chat
     dest: https://matrix.to/#/#galaxyproject_Lobby:gitter.im
+  - src: /fediwall
+    dest: https://fediwall.social/?load=https://raw.githubusercontent.com/bgruening/fediwall-config/refs/heads/main/fediwall-config.json
 
   # Project member personal redirects
   - src: /nate/ccbb2018

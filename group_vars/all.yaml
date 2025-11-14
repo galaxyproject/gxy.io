@@ -168,6 +168,10 @@ gxy_io_rewrites:
   - src: /stats-eu-elixir
     dest: https://stats.galaxyproject.eu/d/xxeOsZiVz/elixir
 
+  # Community section, e.g. for NAR forms
+  - src: /c/nar-author-2026
+    dest: https://docs.google.com/forms/d/e/1FAIpQLScXF7mCnHk1VifeMNeLVh0v-CL_4L0wC-lGuZOOkIQv7uzKcw/viewform?usp=preview
+
   # Train the Trainer discussions
   - src: /ttt
     dest: https://docs.google.com/document/d/1E9VcFNh3nWeQq142szEy-NRHkqYIxFQglqbTaqiAXqQ/edit

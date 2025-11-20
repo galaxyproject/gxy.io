@@ -163,7 +163,7 @@ gxy_io_rewrites:
   - src: /eosc-node-poland-demo
     dest: https://www.youtube.com/watch?v=826burTjOEU
   - src: /berd-eosc25
-    dest: https://www.youtube.com/watch?v=I2AuWYBjzts
+    dest: https://www.youtube.com/watch?v=dPWYo0n4TXg
     #dest: https://usegalaxy.eu/static/share/eosc/berd_eosc25.webm
   - src: /stats-eu-elixir
     dest: https://stats.galaxyproject.eu/d/xxeOsZiVz/elixir

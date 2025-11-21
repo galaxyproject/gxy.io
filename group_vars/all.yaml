@@ -333,6 +333,5 @@ gxy_io_rewrites:
     dest: https://forms.office.com/Pages/ResponsePage.aspx?id=8WfZJNg-SES6plYOxXKss8gM98-9jH9MgRdwq7CpaB5URVVKRFpaV0tCOUQxSFRQUzlGVEhFVjJHUi4u
   - src: /brc-whitepaper-videos
     dest: https://www.youtube.com/playlist?list=PLNFLKDpdM3B-YdpZjoCxtFNUztnmkMu9l
-  - src: /brc-measles-whitepaper
+  - src: /brc-measles-wp
     dest: https://brc-analytics.org/learn/featured-analyses/evolutionary-dynamics-of-coding-overlaps-in-measles
-

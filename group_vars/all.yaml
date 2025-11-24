@@ -142,7 +142,7 @@ gxy_io_rewrites:
     dest: https://doi.org/10.1371/journal.pcbi.1010752
   - src: /p/2024-nar
     dest: https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkae410/7676834
-  - scr: /p/latest-nar
+  - src: /p/latest-nar
     dest: https://doi.org/10.1093/nar/gkae410
 
   # Miscellaneous

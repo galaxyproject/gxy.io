@@ -43,6 +43,8 @@ gxy_io_rewrites:
     dest: https://nekrut.github.io/infographics/what_is_galaxy/
   - src: /what-is-brc
     dest: https://nekrut.github.io/infographics/what_is_brc
+  - src: /what-is-vgp
+    dest: https://nekrut.github.io/infographics/vgp
 
   # Code of Conduct
   - src: /coc

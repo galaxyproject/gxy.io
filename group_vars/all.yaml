@@ -37,10 +37,6 @@ gxy_io_rewrites:
     dest: https://docs.google.com/presentation/d/1gEEsNWAhKqZXrvUDN63Gj9WWlwnjJ0AQkZvyIZFdOsM
   - src: /cordi-2025
     dest: https://docs.google.com/presentation/d/1jrUaEW44bUgMjLlA94KvMmrnwiJholoGEuUtBy3IpXk
-  - src: /pag-2026
-    dest: https://nekrut.github.io/infographics/pag33/
-  - src: /pag-2026-slides
-    dest: https://docs.google.com/presentation/d/12KxLaWhwcyU7DYa-jdoNtAkE_WQevDFNTABemISnsNA/edit?usp=sharing
 
   # Promo sites
   - src: /what-is-galaxy
@@ -131,9 +127,9 @@ gxy_io_rewrites:
 
   #PAG 2026
   - src: /pag-2026
-    dest: https://nekrut.github.io/infographics/
-  
-    
+    dest: https://nekrut.github.io/infographics/pag33/
+  - src: /pag-2026-slides
+    dest: https://docs.google.com/presentation/d/12KxLaWhwcyU7DYa-jdoNtAkE_WQevDFNTABemISnsNA/edit?usp=sharing
 
   #VGP-realted things
   - src: /phase1-data

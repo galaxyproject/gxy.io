@@ -127,13 +127,7 @@ gxy_io_rewrites:
   - src: /pag25-webpage
     dest: https://plan.core-apps.com/pag32/event/ccb7e3a674d26e5273e1670285bf9f7f
   - src: /vgp-dockstore
-    dest: https://dockstore.org/organizations/iwc/collections/vgp
-
-  #PAG 2026
-  - src: /pag-2026
-    dest: https://nekrut.github.io/infographics/
-  
-    
+    dest: https://dockstore.org/organizations/iwc/collections/vgp   
 
   #VGP-realted things
   - src: /phase1-data
@@ -235,6 +229,8 @@ gxy_io_rewrites:
     dest: https://training.galaxyproject.org/training-material/news/2025/04/27/gta-giessen-localhub.html
   - src: /GTA2026
     dest: https://training.galaxyproject.org/training-material/news/2025/11/13/gta-date-2026.html
+  - src: /GTA2026-trainer
+    dest: https://forms.gle/qiVj4KDxFbK49odp9
 
   # Community paages
   - src: /c/ssa

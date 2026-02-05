@@ -127,13 +127,7 @@ gxy_io_rewrites:
   - src: /pag25-webpage
     dest: https://plan.core-apps.com/pag32/event/ccb7e3a674d26e5273e1670285bf9f7f
   - src: /vgp-dockstore
-    dest: https://dockstore.org/organizations/iwc/collections/vgp
-
-  #PAG 2026
-  - src: /pag-2026
-    dest: https://nekrut.github.io/infographics/
-  
-    
+    dest: https://dockstore.org/organizations/iwc/collections/vgp   
 
   #VGP-realted things
   - src: /phase1-data

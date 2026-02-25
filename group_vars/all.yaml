@@ -293,6 +293,8 @@ gxy_io_rewrites:
     dest: https://labs.usegalaxy.org.au/?content_root=https://github.com/galaxyproject/galaxy_codex/blob/main/communities/spoc/lab/usegalaxy.org.yml
   - src: /usegalaxy-org-welcome-microbiology
     dest: https://labs.usegalaxy.org.au/?content_root=https://github.com/galaxyproject/galaxy_codex/blob/main/communities/microgalaxy/lab/usegalaxy.eu.yml
+  - src: /usegalaxy-org-welcome-imaging
+    dest: https://labs.usegalaxy.org.au/?content_root=https://github.com/galaxyproject/galaxy_codex/blob/main/communities/imaging/lab/usegalaxy.org.yml
 
   # Kubernetes related links.  Also see /k8s/deploy and /k8s/manage in the admin tutorials above.
   - src: /k8s/charts

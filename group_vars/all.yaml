@@ -292,7 +292,7 @@ gxy_io_rewrites:
   - src: /usegalaxy-org-welcome-singlecell
     dest: https://labs.usegalaxy.org.au/?content_root=https://github.com/galaxyproject/galaxy_codex/blob/main/communities/spoc/lab/usegalaxy.org.yml
   - src: /usegalaxy-org-welcome-microbiology
-    dest: https://labs.usegalaxy.org.au/?content_root=https://github.com/galaxyproject/galaxy_codex/blob/main/communities/microgalaxy/lab/usegalaxy.eu.yml
+    dest: https://labs.usegalaxy.org.au/?content_root=https://github.com/galaxyproject/galaxy_codex/blob/main/communities/microgalaxy/lab/usegalaxy.org.yml
   - src: /usegalaxy-org-welcome-biodiversity-genomics
     dest: https://labs.usegalaxy.org.au/?content_root=https://github.com/galaxyproject/galaxy_codex/blob/main/communities/biodiversity/lab/usegalaxy.org.yml
   - src: /usegalaxy-org-welcome-imaging

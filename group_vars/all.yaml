@@ -46,6 +46,10 @@ gxy_io_rewrites:
   - src: /what-is-vgp
     dest: https://nekrut.github.io/infographics/vgp
 
+  # Galaxy Roadmap
+  - src: /roadmap
+    dest: https://github.com/orgs/galaxyproject/projects/77/views/1
+
   # Code of Conduct
   - src: /coc
     dest: https://galaxyproject.org/community/coc/

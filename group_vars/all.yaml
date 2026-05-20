@@ -282,6 +282,10 @@ gxy_io_rewrites:
       - src: /GTN:ansible-galaxy
         dest: https://training.galaxyproject.org/training-material/short/ansible-galaxy
 
+  # gxy.io
+  - src: "/(add|edit|admin|new)" 
+    dest: https://github.com/galaxyproject/gxy.io/edit/main/group_vars/all.yaml
+    
   # TPV shared database
   - src: /tpv/db.yml
     dest: https://raw.githubusercontent.com/galaxyproject/tpv-shared-database/9ec8ff26012db320bbaeac9b678499000d2af421/tools.yml

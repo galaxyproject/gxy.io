@@ -117,7 +117,7 @@ gxy_io_rewrites:
     dest: https://docs.google.com/document/d/1u-HKEN_yoODEEGBeVBuxEvIxcrJGhtS98TQzhx84bHw/edit
   - src: /internat25
     dest: https://docs.google.com/document/d/1WY41S87MTJi9hngnt8cxLlVth9fPIkzjksAEhpUICx4/edit?usp=sharing
-  
+
   # PAG-related talks
   # PAG 2024
   - src: /pag24-workshop
@@ -195,6 +195,8 @@ gxy_io_rewrites:
     #dest: https://usegalaxy.eu/static/share/eosc/berd_eosc25.webm
   - src: /stats-eu-elixir
     dest: https://stats.galaxyproject.eu/d/xxeOsZiVz/elixir
+  - src: /bioc-guide-26
+    dest: https://gist.github.com/afgane/8df4ff284b838870c414e8f08a8d5280
 
   # Community section, e.g. for NAR forms
   - src: /c/nar-author-2026

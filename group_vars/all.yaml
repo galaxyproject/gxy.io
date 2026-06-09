@@ -388,7 +388,9 @@ gxy_io_rewrites:
     dest: https://galaxyproject.org/events/2025-12-12-brc-analytics-webinar/
 
   # Galaxy Global Server Instances
-  - src: /instances-join
+  - src: /federation-join
     dest: https://github.com/galaxyproject/galaxy-hub/issues/new?template=instance_request.yml
+  - src: /instances-join
+    dest: https://docs.google.com/forms/d/e/1FAIpQLSd4xzUP3pSYjTHiLoRE10zSJbplDVW7EbGy8EJ9JS0yy2SySg/viewform
   - src: /instances-view
     dest: https://galaxyproject.org/use/

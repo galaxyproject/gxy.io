@@ -252,6 +252,12 @@ gxy_io_rewrites:
   - src: /GTA2026-info
     dest: https://training.galaxyproject.org/training-material/events/2026-05-18-galaxy-academy.html
 
+  # Other training events
+  - src: /denbi-mg-2026
+    dest: https://www.denbi.de/training-courses-2026/2018-galaxy-metagenome-training-course-2026
+  - src: /bari-mg-2026
+    dest: https://elixir-iib-training.github.io/site/2026-06-29-Profiling_microbial_communities
+
   # Community pages
   - src: /c/ssa
     dest: https://galaxyproject.org/community/sig/small-scale-admins/

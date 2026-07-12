@@ -177,7 +177,7 @@ gxy_io_rewrites:
   - src: /test
     dest: http://example.com
   - src: /kui
-    dest: https://lookerstudio.google.com/u/0/reporting/8cfee054-2ddd-4711-af5a-a7a8d62076bb/page/nrqdD
+    dest: https://datastudio.google.com/u/0/reporting/8cfee054-2ddd-4711-af5a-a7a8d62076bb/page/p_kmr3zbo6ad
   - src: /cloud-costs
     dest: https://lookerstudio.google.com/reporting/39b92046-409d-40b4-9463-ca50d5b2c1a1
   - src: /sustainability

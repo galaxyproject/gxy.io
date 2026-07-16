@@ -285,6 +285,11 @@ gxy_io_rewrites:
   # gxy.io
   - src: "/(add|edit|admin|new)" 
     dest: https://github.com/galaxyproject/gxy.io/edit/main/group_vars/all.yaml
+    tests:
+      - /add
+      - /edit
+      - /admin
+      - /new
     
   # TPV shared database
   - src: /tpv/db.yml

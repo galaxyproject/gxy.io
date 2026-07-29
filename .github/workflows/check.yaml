@@ -1,6 +1,6 @@
 name: Check
 on:
-  pull_request_target:
+  pull_request:
     types:
       - opened
       - synchronize
@@ -13,27 +13,33 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: write
     steps:
 
       - name: Checkout PR code
         uses: actions/checkout@v5
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Run check
         run: ansible-playbook -i hosts check.yaml
 
-      - name: Post comment to PR
+      - name: Publish test results
         if: success() || failure()
-        uses: actions/github-script@v8
-        with:
-          script: |
-            const { execSync } = require('child_process');
-            const body = execSync('cat test-results.tap | ./.ci/tapview', { encoding: 'utf8' });
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-              body: body
-            });
+        run: |
+          {
+            echo '## Rewrite function test results'
+            echo
+            if [ -f test-results.tap ]; then
+              echo '```'
+              ./.ci/tapview < test-results.tap || true
+              echo '```'
+              echo
+              echo '<details><summary>Raw TAP output</summary>'
+              echo
+              echo '```'
+              cat test-results.tap
+              echo '```'
+              echo
+              echo '</details>'
+            else
+              echo 'No test results were produced: the check failed before the tests ran, see the job log.'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"

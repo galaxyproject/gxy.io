@@ -39,6 +39,9 @@ gxy_io_rewrites:
     dest: https://docs.google.com/presentation/d/1jrUaEW44bUgMjLlA94KvMmrnwiJholoGEuUtBy3IpXk
   - src: /brc-e2e-rna
     dest: https://docs.google.com/presentation/d/1sxwuWPvfESbBedYtuW1FKAZ93J4jWw13KAdpd3X4sOw/edit?usp=sharing
+    # American Society for Virology 2026
+  - src: /asv26
+    dest: https://nekrut.github.io/slides/asv2026/
 
   # Promo sites
   - src: /what-is-galaxy

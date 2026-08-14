@@ -203,6 +203,10 @@ gxy_io_rewrites:
   - src: /bioc-guide-26
     dest: https://gist.github.com/afgane/8df4ff284b838870c414e8f08a8d5280
 
+  # Blog posts
+  - src: /blog/Cyclospora1
+    dest: https://galaxyproject.org/news/2026-08-14-genotyping-cyclospora
+
   # Community section, e.g. for NAR forms
   - src: /c/nar-author-2026
     dest: https://docs.google.com/forms/d/e/1FAIpQLScXF7mCnHk1VifeMNeLVh0v-CL_4L0wC-lGuZOOkIQv7uzKcw/viewform?usp=preview

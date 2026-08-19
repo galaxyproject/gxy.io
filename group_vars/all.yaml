@@ -42,6 +42,9 @@ gxy_io_rewrites:
     # American Society for Virology 2026
   - src: /asv26
     dest: https://nekrut.github.io/slides/asv2026/
+    # 16th International Congress of Parasitology, Montreal 2026
+  - src: /icopa26
+    dest: https://nekrut.github.io/slides/icopa26/
 
   # Promo sites
   - src: /what-is-galaxy

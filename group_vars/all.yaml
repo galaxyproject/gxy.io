@@ -208,6 +208,8 @@ gxy_io_rewrites:
     dest: https://stats.galaxyproject.eu/d/xxeOsZiVz/elixir
   - src: /bioc-guide-26
     dest: https://gist.github.com/afgane/8df4ff284b838870c414e8f08a8d5280
+  - src: /esg4stars-kickoff-programme
+    dest: https://docs.google.com/document/d/1Uh_cejf4fFVuOQDl3iIErBBoaoAuDlOR31n68aOzpb4/edit?usp=sharing
 
   # Blog posts
   - src: /blog/Cyclospora1

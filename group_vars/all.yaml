@@ -48,6 +48,9 @@ gxy_io_rewrites:
     # European Conference on Computational Biology 2026
   - src: /eccb26
     dest: https://docs.google.com/presentation/d/1papU449ewH_Z35KhZ7PfQK5wzWwRC8fU/edit?usp=sharing
+    # BioHackathon 2026
+  - src: /biohack26
+    dest: https://claude.ai/artifact/VZKHeZ7uZ4eJhLHxRoo9kA
 
   # Promo sites
   - src: /what-is-galaxy

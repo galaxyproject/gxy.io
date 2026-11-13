@@ -110,6 +110,12 @@ gxy_io_rewrites:
   - src: /fediwall
     dest: https://fediwall.social/?load=https://raw.githubusercontent.com/bgruening/fediwall-config/refs/heads/main/fediwall-config.json
 
+  # Hub pages
+  - src: /hub/iwc
+    dest: https://galaxyproject.org/projects/iwc/
+  - src: /iwc
+    dest: https://iwc.galaxyproject.org
+
   # Project member personal redirects
   - src: /nate/ccbb2018
     dest: https://docs.google.com/presentation/d/18VO-J2Ie-wNSApBN_4JlOaCilWQP6qNOtni9NLENZOE/
